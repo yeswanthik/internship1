@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form id="googleForm" class="pt-5 pb-5">
+        <div>
+            <label class="labelclass" for="selectSource">Select Your Source : <span class="specialchar">| </span></label>
+            <input class="googleclass inputclass" type="text" name="" id="selectSource" value="Google Cloud Storage" />
+
+        </div>
+        <br />
+        <div class="d-flex flex-row">
+            <label class="labelclass" for="pipeLineName">Provide name for a pipeline : <span class="specialchar">|</span></label>
+            <div class="d-flex flex-column">
+                <input class="inputclass" placeholder="e.g., cust_shop_energy_gkateway001" type="text" name="" id="pipeLineName" value="" />
+                <p class="error" id="errorPipeline"></p>
+            </div>
+        </div> <br />
+        <div class="d-flex flex-row">
+            <label class="labelclass" for="gcsProject">GCS project name : <span class="specialchar">|</span></label>
+            <div class="d-flex flex-column">
+                <input class="inputclass" placeholder="project-id" type="text" name="" id="gcsProject" value="" />
+                <p class="error" id="gcsName"></p>
+            </div>
+        </div> <br />
+        <div class="d-flex flex-row">
+            <label class="labelclass" for="gcsBucketName">GCS Bucket Name : <span class="specialchar">|</span></label>
+            <div class="d-flex flex-column">
+                <input class="inputclass" placeholder="gs://your-bucket" type="text" name="" id="gcsBucketName" value="" />
+                <p class="error" id="gcsbucket"></p>
+            </div>
+        </div><br />
+
+        <div class="d-flex flex-row">
+            <label class="labelclass" for="gcslocation">Input Cloud Storage File(s) : <span class="specialchar">|</span></label>
+            <div class="d-flex flex-column">
+                <input class="inputclass" placeholder="GCS location of your files" type="text" name="" id="gcslocation" value="" />
+                <p class="storage">Example: gs://your-bucket/your-files/01.csv</p>
+                <p class="error" id="gcslocationerror"></p>
+            </div>
+        </div>
+
+
+
+        <br />
+        <div class="d-flex flex-row">
+            <label class="labelclass" for="credentials">GCS credentials : <span class="specialchar">|</span></label>
+            <div class="d-flex flex-column">
+                <input class="credentials inputclass" type="password" name="" id="credentials" value="" />
+                <p class="error" id="gcscred"></p>
+            </div>
+        </div><br />
+        <div class="d-flex flex-row">
+            <label class="labelclass" for="runevery">Run Every : <span class="specialchar">|</span></label>
+            <div class="d-flex flex-column">
+                <input class="inputclass" placeholder="(in minutes)" type="number" name="" id="runevery" value="" />
+                <p class="error" id="runeveryerror"></p>
+            </div>
+        </div> <br />
+        <div class="text-center pt-5">
+            <button class="button" type="submit">Create</button>
+            <button id="cancelbtnid" class="cancelbtn button">Cancel</button>
+
+        </div>
+
+
+    </form>
+
+
+<script src="form.js"> </script>
+
+</script>
+</body>
+
+</html>
